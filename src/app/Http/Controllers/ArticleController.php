@@ -9,7 +9,7 @@ class ArticleController extends Controller
 {
 
 	public function index(){
-		return Article::all();
+		return Article::all(['id', 'title']);
 	}
 
 	public function show($id){

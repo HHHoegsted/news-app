@@ -24,7 +24,7 @@ class ArticleFactory extends Factory
 	{
 	  $this->faker->addProvider(new PicsumPhotosProvider($this->faker));
 		return [
-			'title' => $this->faker->sentence(),
+			'title' => $this->faker->sentence(3),
 			'body' => $this->faker->paragraph(50),
 			'image_url' => $this->faker->imageUrl(),
 		];

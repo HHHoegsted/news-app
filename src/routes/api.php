@@ -17,6 +17,9 @@ use App\Http\Controllers\ArticleController;
 
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles');
+Route::get('/article/{id}', [ArticleController::class, 'show'])->name('article');
+Route::post('/article', [ArticleController::class, 'store'])->name('create_article');
+Route::post('/article/{id}/update', [ArticleController::class, 'update'])->name('update_article');
 
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {

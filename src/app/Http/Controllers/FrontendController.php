@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class FrontendController extends Controller
 {
     public function index(){
-		return view('articles.index', ['articles' => Article::all()]);
+		return view('articles.index', ['articles' => Article::latest()->paginate(4)]);
 	}
 
 	public function show($id){

@@ -23,10 +23,11 @@ class ArticleFactory extends Factory
 	public function definition()
 	{
 	  $this->faker->addProvider(new PicsumPhotosProvider($this->faker));
+		$img_seed = $this->faker->word();
 		return [
 			'title' => $this->faker->sentence(3),
 			'body' => $this->faker->paragraph(50),
-			'image_url' => $this->faker->imageUrl(),
+			'image_url' => $this->faker->imageUrl(640,480, $img_seed),
 		];
 	}
 }

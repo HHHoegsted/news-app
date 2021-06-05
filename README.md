@@ -1,8 +1,20 @@
 # News-app
 
-This is an app to show potential new employers my skillset
+This is a simple news-app to show my capabilities in simple Laravel with Bootstrap, and creating and running Docker containers. 
+I have coded all custom parts of this project.
 
-## Running Artisan, Composer and NPM:
+## Starting up the project
+
+* git clone
+* docker-compose up -d --build
+* cd src
+* cp .env.example .env
+* composer install
+* npm install
+* npm run dev
+* http://localhost:8081
+
+## Running Artisan, Composer and NPM
 
 * docker-compose run --rm artisan ...
 * docker-compose run --rm composer ...

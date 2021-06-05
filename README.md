@@ -12,6 +12,7 @@ I have coded all custom parts of this project.
 * composer install
 * npm install
 * npm run dev
+* docker-compose run --rm artisan migrate:fresh --seed
 * http://localhost:8081
 
 ## Running Artisan, Composer and NPM

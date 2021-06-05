@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/articles');
 });
 
 Route::get('/articles', [FrontendController::class, 'index'])->name('FE_articles');
+Route::get('/article/{id}', [FrontendController::class, 'show'])->name('FE_article');
